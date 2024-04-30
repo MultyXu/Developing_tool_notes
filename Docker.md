@@ -61,7 +61,8 @@ RUN \
   apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
-  apt-get install -y curl git unzip vim nano wget
+  apt-get install -y curl git unzip vim nano wget\
+  apt install nvidia-driver-535 nvidia-dkms-535
 
 # Set environment variables.
 ENV HOME /root
