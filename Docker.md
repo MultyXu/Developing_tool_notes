@@ -22,7 +22,11 @@ docker run -it --rm --gpus 'device=1' --shm-size 16G -v /media/sde1/multy:/works
 - `--rm`: remove container when exit 
 - `--gpus`: allows GPU usage `--gpus=all` to se all other than specified
 - `-v`: mount a dirctory to the container to store files. `<local-machine-directory>:<directory-in-contaienr>`
+- `--name`: give the container a name if needed.
 - `bash`: indicate create a bash terminal when start the container
+
+## With vscode 
+`cmd+shift+p` and select `Remote-containers: Attach to running Container`
 
 ## Save changed container as image
 ```bash
@@ -57,12 +61,7 @@ RUN \
   apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
-  apt-get install -y curl git unzip vim nano wget  
-
-# Add files.
-ADD root/.bashrc /root/.bashrc
-ADD root/.gitconfig /root/.gitconfig
-ADD root/.scripts /root/.scripts
+  apt-get install -y curl git unzip vim nano wget
 
 # Set environment variables.
 ENV HOME /root
