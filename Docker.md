@@ -15,7 +15,7 @@ docker image rm <the-image-id> # remove an image
 ### running a container (ubuntu specific)
 
 ``` bash
-docker run -it --rm --gpus 'device=1' --shm-size 16G -v /media/sde1/multy:/workspace 8d981c027411 bash
+docker run -it --rm --name multy_ubuntu --gpus 'device=1' --shm-size 16G -v /media/sde1/multy:/workspace 8d981c027411 bash
 ```
 
 - `-it`: create iteractive terminal
