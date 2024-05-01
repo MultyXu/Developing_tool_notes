@@ -30,8 +30,8 @@ docker run -it --rm --name multy_ubuntu --gpus device=1 --shm-size 16G -v /media
 
 ## Save changed container as image
 ```bash
-# docker commit -p <container_id> <new_container_name>
-sudo docker commit -p 524aa76baafb myubuntu
+# docker commit -p <container_id> <new_container_name>:<tag>
+sudo docker commit -p 524aa76baafb myubuntu:version2
 ```
 This save the current running (changed) container as a new image call `myubuntu`
 
