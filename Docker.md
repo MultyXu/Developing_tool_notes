@@ -3,7 +3,7 @@
 ## Basic interaction 
 
 ```bash
-docker ps           # list all running process
+docker ps           # list all running process, `-a` option list all containers including stopped
 docker image list   # list all createrd images
 docker container list # list all built containers
 
