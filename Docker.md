@@ -21,7 +21,7 @@ docker run -it --rm --name multy_ubuntu --gpus device=1 --shm-size 16G -v /media
 - `-it`: create iteractive terminal
 - `--rm`: remove container when exit 
 - `--gpus`: allows GPU usage `--gpus all` to se all other than specified
-- `-v`: mount a dirctory to the container to store files. `<local-machine-directory>:<directory-in-contaienr>`
+- `-v`: mount a dirctory to the container to store files. `<local-machine-directory>:<directory-in-contaienr>`. You can specify multiple `-v` option to mount multiple folders
 - `--name`: give the container a name if needed.
 - `bash`: indicate create a bash terminal when start the container
 
