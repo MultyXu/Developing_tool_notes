@@ -34,8 +34,11 @@ docker run -it --rm --name multy_ubuntu --gpus device=1 --shm-size 16G -v /media
 sudo docker commit -p 524aa76baafb myubuntu:version2
 ```
 This save the current running (changed) container as a new image call `myubuntu`
-
-> **NOTE: When saving the container, do not save it when a volume is attached to it. Otherwise, it will save the attached volume as a part of the container as well. (unless you want to do this)**
+### change tag 
+```
+docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+```
+Usually give a image name, it will find the `latest` tag.
 
 ## Dockerfile
 ### build image
