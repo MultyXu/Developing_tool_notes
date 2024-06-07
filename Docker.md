@@ -76,3 +76,38 @@ WORKDIR /root
 # Define default command.
 CMD ["bash"]
 ```
+## GUI on remote container over ssh
+
+### For Macos
+Download XQuartz using brew, in setting security, ensure "allow all connections"
+
+run container with port forwarding
+```
+-p 8000:22
+```
+
+in `/etc/ssh/sshd_config/` set 
+```
+PermitRootLogin yes
+PasswordAuthentication yes
+```
+
+restart the ssh service 
+```
+service ssh restart
+# or
+/etc/init.d/ssh restart
+```
+
+add password for root
+```
+passwd root
+[ender password]
+```
+
+New session directly ssh into container
+```
+ssh +X root@[ip.address] -p 8000
+```
+
+Now the x11 should be working, test if working with xclock
