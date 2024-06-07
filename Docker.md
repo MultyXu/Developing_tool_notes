@@ -86,8 +86,15 @@ run container with port forwarding
 -p 8000:22
 ```
 
+Install necessary dependencies
+```
+apt install xauth x11-apps openssh-server
+```
+
 in `/etc/ssh/sshd_config/` set 
 ```
+X11Forwarding yes
+X11UseLocalhost no
 PermitRootLogin yes
 PasswordAuthentication yes
 ```
@@ -107,7 +114,7 @@ passwd root
 
 New session directly ssh into container
 ```
-ssh +X root@[ip.address] -p 8000
+ssh -X root@[ip.address] -p 8000
 ```
 
-Now the x11 should be working, test if working with xclock
+Now the x11 should be working, test if working with xclock. When restart the container, remember to restart the ssh service as well.
