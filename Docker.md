@@ -77,7 +77,17 @@ WORKDIR /root
 CMD ["bash"]
 ```
 ## GUI on remote container over ssh
+### For windows
+follow this link: https://medium.com/@potatowagon/how-to-use-gui-apps-in-linux-docker-container-from-windows-host-485d3e1c64a3
 
+in order to show pyplot in pythong file use
+```
+import matplotlib
+matplotlib.use('tkagg')
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3])
+plt.show()
+```
 ### For Macos
 Download XQuartz using brew, in setting security, ensure "allow all connections"
 
