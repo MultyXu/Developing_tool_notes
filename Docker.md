@@ -77,6 +77,36 @@ WORKDIR /root
 CMD ["bash"]
 ```
 ## GUI on remote container over ssh
+### For windows wsl2 
+permit any client for connection, in `wsl2` run
+```
+xhost +
+```
+
+if you want to disable the permission, run 
+```
+xhost -
+```
+
+get the display parameter 
+```
+echo $DISDPLAY
+```
+
+start the container with x11 config 
+```
+docker run --net host -v /tmp/.X11-unix:/tmp/.X11-unix -it [image_id]
+```
+
+set the environment variable the same as wsl2 
+```
+export DISPLAY=:0 # depends on what parameter you get
+```
+
+test gui 
+```
+xeyes
+```
 ### For windows
 follow this link: https://medium.com/@potatowagon/how-to-use-gui-apps-in-linux-docker-container-from-windows-host-485d3e1c64a3
 
