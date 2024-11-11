@@ -76,7 +76,7 @@ WORKDIR /root
 # Define default command.
 CMD ["bash"]
 ```
-## GUI on remote container over ssh
+## GUI on local/remote container over ssh
 ### For windows wsl2 
 permit any client for connection, in `wsl2` run
 ```
@@ -121,6 +121,8 @@ plt.plot([1, 2, 3])
 plt.show()
 ```
 ### For Macos
+> NOTE: The following step is necessary when working with UMich VPN, if you are connected to the UMich network, you can do the same for the windows.
+
 Download XQuartz using brew, in setting security, ensure "allow all connections"
 
 To grant permission to client on mac terminal run 
