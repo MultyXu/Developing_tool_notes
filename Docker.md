@@ -81,6 +81,8 @@ CMD ["bash"]
 permit any client for connection, in `wsl2` run
 ```
 xhost +
+# or
+xhost +local:[wsl IP] # for more secure connection
 ```
 
 if you want to disable the permission, run 
