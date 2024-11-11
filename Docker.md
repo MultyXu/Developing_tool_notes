@@ -123,6 +123,11 @@ plt.show()
 ### For Macos
 Download XQuartz using brew, in setting security, ensure "allow all connections"
 
+To grant permission to client on mac terminal run 
+```
+xhost +
+```
+
 run container with port forwarding
 ```
 -p 8000:22
