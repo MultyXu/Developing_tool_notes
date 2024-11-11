@@ -164,4 +164,5 @@ New session directly ssh into container
 ssh -X root@[ip.address] -p 8000
 ```
 >NOTE: when connecting through ssh, no need to change $DISPLAY variable
+
 Now the x11 should be working, test if working with xclock. When restart the container, remember to restart the ssh service as well.
