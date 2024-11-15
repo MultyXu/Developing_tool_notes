@@ -28,4 +28,4 @@ WORKDIR /root
 # Define default command.
 CMD ["bash"]
 
-# docker run -it --name multy_gs_1 --gpus device=1 --shm-size 16G -v /media/sde1/multy/workspace:/workspace multy/ubuntu_22.04_cuda11.7.1_gs bash 
+# docker run -it --name multy_gs_0 --gpus device=0 --shm-size 16G -v /media/sde1/multy/workspace:/workspace -v /media/sdd1/multy:/sdd1 -v /home/multy:/sunny_multy multy/ubuntu_22.04_cuda11.7.1_gs bash 
