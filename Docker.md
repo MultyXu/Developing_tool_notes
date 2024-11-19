@@ -76,6 +76,12 @@ WORKDIR /root
 # Define default command.
 CMD ["bash"]
 ```
+## GUI via VNC (remote desktop)
+follow this link: https://medium.com/@gustav0.lewin/how-to-make-a-docker-container-with-vnc-access-f607958141ae
+
+### for macos
+try built-in vnc view, go to finder and hit command+k, enter `vnc://[host-ip]`
+
 ## GUI on local/remote container over ssh
 ### For windows wsl2 
 permit any client for connection, in `wsl2` run
