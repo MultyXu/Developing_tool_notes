@@ -1,16 +1,19 @@
 # Pull base image.
-FROM nvidia/cuda:11.7.1-runtime-ubuntu22.04
+FROM nvidia/cudagl:11.4.1-runtime-ubuntu20.04
 
 ENV USER=root
 
-RUN ln -fs /usr/share/zoneinfo/America/Detroit /etc/localtime 
+# provide time, some apt install package needs that
+RUN ln -fs /usr/share/zoneinfo/America/Detroit /etc/localtime
 
 # Install minimum requirements
 RUN \
   apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
-  apt-get install -y curl git unzip vim nano tmux wget xauth x11-apps openssh-server ffmpeg lsb-release cmake
+  apt-get install -y curl git unzip vim nano tmux wget xauth x11-apps lsb-release cmake
+
+# needed for build habitat-sim
 
 # Install XFCE, VNC server, dbus-x11, and xfonts-base
 RUN apt-get update && apt-get install -y --no-install-recommends \
