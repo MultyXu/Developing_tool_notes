@@ -1,7 +1,7 @@
 services:
     vln:
-        image: curly/sg_vln:habitat2.5
-        container_name: sg_vln_multy
+        image: curly/sg_vln:habitat3.3
+        container_name: sg_vln_multy_3.3_no.3
         entrypoint: zsh
         environment:
             - ACCEPT_EULA=Y
@@ -14,7 +14,7 @@ services:
             # - TERM=xterm-256color
             # - XAUTHORITY
         ports:
-            - "5905:5900"
+            - "5911:5900"
             # - "6080:80"
         volumes:
             # - $HOME/Projects/VLN/isaac_sim/isaac_files/cache/kit:/isaac-sim/kit/cache:rw
@@ -25,8 +25,9 @@ services:
             # - $HOME/Projects/VLN/isaac_sim/isaac_files/logs:$HOME/.nvidia-omniverse/logs:rw
             # - $HOME/Projects/VLN/isaac_sim/isaac_files/data:$HOME/.local/share/ov/data:rw
             # - $HOME/Projects/VLN/isaac_sim/isaac_files/documents:$HOME/Documents:rw
-            - /media/sdc1/multy/tiamat_ws:/root/Projects:rw
-            # - /media/sdc1/multy/tiamat_ws/habitat_datasets:/data:rw
+            - /home/huyu/multy/Projects:/root/Projects:rw
+            - /home/huyu/habitat_datasets:/data:rw
+            - /mnt/workspace/datasets/habitat_datasets:/mnt_habitat_datasets:rw
             # - /mnt/workspace/users/huyu/junzhe/VLN_dump:/root/Projects/VLN/ext_dump/:rw
             # - /tmp/.X11-unix:/tmp/.X11-unix:rw
             # - $HOME/.Xauthority:/root/.Xauthority:rw

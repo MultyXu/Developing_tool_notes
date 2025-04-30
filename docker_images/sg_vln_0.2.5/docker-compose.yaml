@@ -25,8 +25,8 @@ services:
             # - $HOME/Projects/VLN/isaac_sim/isaac_files/logs:$HOME/.nvidia-omniverse/logs:rw
             # - $HOME/Projects/VLN/isaac_sim/isaac_files/data:$HOME/.local/share/ov/data:rw
             # - $HOME/Projects/VLN/isaac_sim/isaac_files/documents:$HOME/Documents:rw
-            - /media/sdc1/multy/tiamat_ws:/root/Projects:rw
-            # - /media/sdc1/multy/tiamat_ws/habitat_datasets:/data:rw
+            - /home/huyu/multy/Projects:/root/Projects:rw
+            - /home/huyu/habitat_datasets:/data:rw
             # - /mnt/workspace/users/huyu/junzhe/VLN_dump:/root/Projects/VLN/ext_dump/:rw
             # - /tmp/.X11-unix:/tmp/.X11-unix:rw
             # - $HOME/.Xauthority:/root/.Xauthority:rw
