@@ -1,0 +1,1 @@
+docker compose run --name test_noetic_vnc -P noetic_vnc

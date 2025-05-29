@@ -1,0 +1,30 @@
+services:
+    noetic_vnc:
+        image: multy/noetic_vnc:test
+        container_name: noetic_vnc
+        entrypoint: bash
+        # environment:
+        #     - ACCEPT_EULA=Y
+        #     - PRIVACY_CONSENT=Y
+        #     - VNC_PASSWORD=curly
+        #     - RESOLUTION=1920x1080
+        #     # - DISPLAY=${DISPLAY}
+        #     # - QT_GRAPHICSSYSTEM=native
+        #     # - NVIDIA_DRIVER_CAPABILITIES=all
+        #     # - TERM=xterm-256color
+        #     # - XAUTHORITY
+        ports:
+            - "5911:5900"
+        volumes:
+            - /multy_vino:/home/multy
+        ulimits:
+            nofile:
+                soft: 65536
+                hard: 65536
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [ gpu ]

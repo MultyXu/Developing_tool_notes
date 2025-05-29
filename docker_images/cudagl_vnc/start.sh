@@ -1,0 +1,1 @@
+docker compose run --name test_cudagl_vnc -P cudagl_vnc
