@@ -11,7 +11,7 @@ chmod 600 ~/.vnc/passwd
 vncserver -kill $DISPLAY
 rm -rf /tmp/.X1-lock
 rm -rf /tmp/.X11-unix/X1
-vncserver $DISPLAY -depth 16 -geometry 1280x800
+vncserver $DISPLAY -depth 16 -geometry 1600x960
 # Wait for VNC server to start
 sleep 1
 
