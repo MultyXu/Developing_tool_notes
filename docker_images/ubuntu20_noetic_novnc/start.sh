@@ -1,1 +1,1 @@
-docker compose run --name multy_noetic_novnc_2 -P multy_noetic_novnc
+docker compose run --name multy_noetic_novnc -P multy_noetic_novnc

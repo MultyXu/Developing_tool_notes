@@ -14,8 +14,8 @@ services:
         #     # - TERM=xterm-256color
         #     # - XAUTHORITY
         ports:
-            - "5912:5901"
-            - "6082:6081"
+            - "5911:5901"
+            - "6081:6081"
         volumes:
             - /home/huyu/multy:/multy
         ulimits:
