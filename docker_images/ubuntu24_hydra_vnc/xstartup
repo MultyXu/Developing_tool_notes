@@ -1,0 +1,5 @@
+#!/bin/bash
+xrdb $HOME/.Xresources 2>/dev/null
+export XKL_XMODMAP_DISABLE=1
+openbox-session &
+xterm  # keep xterm open to prevent early exit

@@ -1,0 +1,1 @@
+docker compose run --name test_ubuntu24_hydra_vnc -P ubuntu24_hydra_vnc
