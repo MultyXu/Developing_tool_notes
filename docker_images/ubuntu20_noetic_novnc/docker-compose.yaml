@@ -1,0 +1,31 @@
+services:
+    multy_noetic_novnc:
+        image: multy/ubuntu20_cudagl11.4_noetic_novnc:latest
+        container_name: multy_noetic_novnc
+        entrypoint: bash
+        # environment:
+        #     - ACCEPT_EULA=Y
+        #     - PRIVACY_CONSENT=Y
+        #     - VNC_PASSWORD=curly
+        #     - RESOLUTION=1920x1080
+        #     # - DISPLAY=${DISPLAY}
+        #     # - QT_GRAPHICSSYSTEM=native
+        #     # - NVIDIA_DRIVER_CAPABILITIES=all
+        #     # - TERM=xterm-256color
+        #     # - XAUTHORITY
+        ports:
+            - "5912:5901"
+            - "6082:6081"
+        volumes:
+            - /home/huyu/multy:/multy
+        ulimits:
+            nofile:
+                soft: 65536
+                hard: 65536
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [ gpu ]
