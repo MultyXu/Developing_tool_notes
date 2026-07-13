@@ -52,4 +52,13 @@ fi
 echo "==> Installing amazon-efs-utils (S3/EFS client)"
 curl https://amazon-efs-utils.aws.com/efs-utils-installer.sh | sudo sh -s -- --install
 
+echo "==> Installing unzip"
+sudo apt install -y unzip
+
+echo "==> Installing AWS CLI v2"
+cd "$HOME"
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip -o awscliv2.zip
+sudo ./aws/install --update
+
 echo "==> Setup complete! Log out and back in (or run 'zsh') for the shell change to take effect."
